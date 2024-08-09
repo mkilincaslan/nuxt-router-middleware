@@ -6,5 +6,15 @@
 </template>
 
 <script setup>
-  const user = useCookie('user')
+  const user = useCookie('user');
+
+  definePageMeta({
+    middleware: function (to, from) {
+      const auth = useCookie('user');
+
+      if (!auth.value) {
+        return navigateTo('/login');
+      }
+    }
+  })
 </script>
