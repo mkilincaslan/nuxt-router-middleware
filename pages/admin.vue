@@ -7,6 +7,6 @@
 
 <script setup>
   definePageMeta({
-    middleware: ['authenticate']
+    middleware: ['authenticate', 'admin']
   });
 </script>
