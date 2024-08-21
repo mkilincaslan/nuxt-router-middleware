@@ -6,5 +6,7 @@
 </template>
 
 <script setup>
-  
+  definePageMeta({
+    middleware: ['authenticate']
+  });
 </script>
